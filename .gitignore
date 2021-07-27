@@ -1,0 +1,14 @@
+# log files
+*.log
+
+# Annoying Office temp files
+*~$*
+
+# VSCode files
+*.vscode
+
+python_results/*
+example_images/.DS_Store
+.DS_Store
+example_images/*
+experimental_data/*
