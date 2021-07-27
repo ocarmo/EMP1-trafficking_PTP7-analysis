@@ -1,0 +1,20 @@
+name: testenv
+channels:
+  - defaults
+dependencies:
+  - python=3.9.0
+  - jupyter
+  - ipython
+  - pandas
+  - numpy
+  - seaborn
+  - scikit-image
+  - loguru
+  - ipykernel
+  - plotly
+  - autopep8
+  - scikit-learn
+  - bioinfokit
+  - matplotlib-scalebar
+  - pytesseract
+prefix: /opt/miniconda3/envs/testenv

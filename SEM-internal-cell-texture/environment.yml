@@ -1,0 +1,21 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipykernel
+  - ipython
+  - jupyter
+  - numpy
+  - pandas
+  - scipy
+  - seaborn
+  - statsmodels
+  - xlrd
+  - xlsxwriter
+  - napari
+  - pip:
+    - loguru
+    - setuptool
+    - cellpose
+    - git+https://github.com/dezeraecox/GEN_Utils
+

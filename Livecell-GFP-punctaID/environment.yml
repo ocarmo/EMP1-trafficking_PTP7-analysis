@@ -1,0 +1,17 @@
+name: droplet_analysis
+channels:
+  - defaults
+dependencies:
+  - python=3.9.0
+  - jupyter
+  - ipykernel
+  - numpy
+  - seaborn
+  - pandas
+  - scikit-image
+  - loguru
+  - napari
+  - autopep8
+  - xlsxwriter
+  - matplotlib-scalebar
+prefix: /opt/miniconda3/envs/droplet_analysis
