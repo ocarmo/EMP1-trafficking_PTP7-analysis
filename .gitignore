@@ -14,3 +14,7 @@ experimental_data/*
 
 # Ignore Mac DS_Store files
 .DS_Store
+SEM-external-cell-texture/.DS_Store
+SEM-internal-cell-texture/.DS_Store
+Livecell-GFP-punctaID/.DS_Store
+ImmunoEM-vesicle-detection/.DS_Store
