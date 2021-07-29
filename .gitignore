@@ -7,8 +7,10 @@
 # VSCode files
 *.vscode
 
+# Data and results folders
 python_results/*
-example_images/.DS_Store
-.DS_Store
 example_images/*
 experimental_data/*
+
+# Ignore Mac DS_Store files
+.DS_Store
