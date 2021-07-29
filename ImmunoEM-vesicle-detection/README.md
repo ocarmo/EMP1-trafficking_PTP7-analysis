@@ -1,4 +1,4 @@
-# Analysis 011: OC-vesicle-detection
+# Immuno-electron microscropy: vesicle detection
 
 **Purpose**: Identify the red blood cell membrane, Maurer's clefts, and vesicles of *Plasmodium falciparum* infected red blood cells in immuno electron micrographs. Cells were Equinatoxin II permeabilized to clear intracellular hemoglobin, then probed with the antibody indicated before 1-2% OSO4 staining, embedding, and sectioning for TEM.
 

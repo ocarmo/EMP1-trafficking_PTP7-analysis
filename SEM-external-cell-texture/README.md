@@ -1,4 +1,4 @@
-# Analysis 017: OC_infected-cell-texture
+# SEM: external cell texture
 
 **Purpose**: Quantify 'knobs' protruding from infected RBCs in EM images
 

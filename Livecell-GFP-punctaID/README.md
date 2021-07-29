@@ -1,4 +1,4 @@
-# CellPose Implementation
+# GFP puncta identification
 
 **Purpose**: 
 Implement general-purpose scripts to integrate CellPose cell quantification into a range of workflows.
