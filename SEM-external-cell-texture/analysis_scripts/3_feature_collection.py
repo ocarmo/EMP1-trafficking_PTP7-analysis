@@ -10,12 +10,12 @@ from loguru import logger
 
 logger.info('Import OK')
 
-# image_folder = f'python_results/initial_cleanup/'
-# mask_folder = f'python_results/napari_masking/'
-# output_folder = f'python_results/feature_collection/'
-image_folder = f'experimental_data/initial_cleanup_1/'
-mask_folder = f'python_results/napari_masking_1/'
-output_folder = f'python_results/feature_collection_1/'
+# image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup/'
+# mask_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_masking/'
+# output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/feature_collection/'
+image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup_1/'
+mask_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_masking_1/'
+output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/feature_collection_1/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

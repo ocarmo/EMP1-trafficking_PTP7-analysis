@@ -18,12 +18,12 @@ from loguru import logger
 # from napari.utils.settings import SETTINGS
 # SETTINGS.application.ipy_interactive = False
 
-# image_folder = f'python_results/initial_cleanup/'
-# mask_folder = f'python_results/cellpose_masking/'
-# output_folder = f'python_results/napari_masking/'
-image_folder = f'python_results/initial_cleanup_1/'
-mask_folder = f'python_results/cellpose_masking_1/'
-output_folder = f'python_results/napari_masking_1/'
+# image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup/'
+# mask_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/cellpose_masking/'
+# output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_masking/'
+image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup_1/'
+mask_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/cellpose_masking_1/'
+output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_masking_1/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

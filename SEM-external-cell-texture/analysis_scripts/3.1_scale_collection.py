@@ -14,10 +14,10 @@ from loguru import logger
 
 logger.info('Import OK')
 
-# image_folder = f'python_results/initial_cleanup/'
-# output_folder = f'python_results/napari_scale/'
-image_folder = f'python_results/initial_cleanup_1/'
-output_folder = f'python_results/napari_scale_1/'
+# image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup/'
+# output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_scale/'
+image_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup_1/'
+output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/napari_scale_1/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

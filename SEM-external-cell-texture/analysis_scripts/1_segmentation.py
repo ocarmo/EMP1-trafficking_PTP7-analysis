@@ -24,10 +24,10 @@ from loguru import logger
 
 logger.info('Import ok')
 
-# input_folder = f'experimental_data/initial_cleanup/'
-# output_folder = f'python_results/cellpose_masking/'
-input_folder = f'experimental_data/initial_cleanup_1/'
-output_folder = f'python_results/cellpose_masking_1/'
+# input_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup/'
+# output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/cellpose_masking/'
+input_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/initial_cleanup_1/'
+output_folder = f'SEM-external-cell-texture/python_results/SEM-external-cell-texture_Analyzed/cellpose_masking_1/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
