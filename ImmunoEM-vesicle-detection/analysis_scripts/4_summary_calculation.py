@@ -17,8 +17,8 @@ import functools
 
 logger.info('Import OK')
 
-input_folder = f'python_results/feature_properties/'
-output_folder = f'python_results/feature_summaries/'
+input_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_properties/'
+output_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_summaries/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

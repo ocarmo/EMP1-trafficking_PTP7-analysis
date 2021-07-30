@@ -12,8 +12,8 @@ from loguru import logger
 logger.info('Import OK')
 
 # define location parameters
-input_folder = f'python_results/segmentation/'
-output_folder = f'python_results/feature_validation/'
+input_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/segmentation/'
+output_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_validation/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

@@ -22,8 +22,8 @@ import seaborn as sns
 
 from collections import defaultdict
 
-input_folder = f'python_results/initial_cleanup/'
-output_folder = f'python_results/segmentation/'
+input_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/initial_cleanup/'
+output_folder = f'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/segmentation/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

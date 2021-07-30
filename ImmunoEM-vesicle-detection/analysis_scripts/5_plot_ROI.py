@@ -13,10 +13,10 @@ from loguru import logger
 
 logger.info('Import OK')
 
-input_path = 'python_results/feature_summaries/'
-output_folder = 'python_results/plot/'
-image_folder = 'python_results/initial_cleanup/'
-feature_masks_folder = 'python_results/feature_validation/'
+input_path = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_summaries/'
+output_folder = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/plot/'
+image_folder = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/initial_cleanup/'
+feature_masks_folder = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_validation/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

@@ -14,9 +14,9 @@ from loguru import logger
 
 logger.info('Import OK')
 
-input_path = 'python_results/feature_summaries/'
-output_folder = 'python_results/plot/'
-feature_masks_folder = 'python_results/feature_validation_combined/'
+input_path = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_summaries/'
+output_folder = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/plot/'
+feature_masks_folder = 'ImmunoEM-vesicle-detection/python_results/ImmunoEM-vesicle-detection_Analyzed/feature_validation_combined/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
