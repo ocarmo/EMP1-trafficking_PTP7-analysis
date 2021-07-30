@@ -41,14 +41,14 @@ def download_resources(filename, url, resource_folder):
 if __name__ == "__main__":
 
     url = 'https://sandbox.zenodo.org/record/888160/files/SEM-internal-cell-texture_analysis.zip?download=1'
-    folder_name = 'zenodo_download'
-    output_folder = 'python_results/'
+    file_name = 'SEM-internal-cell-texture'
+    output_folder = 'SEM-internal-cell-texture/python_results'
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
     # Download file from repository
     download_resources(
-        filename=f'{folder_name}.zip', url=url, resource_folder=output_folder)
-    with zipfile.ZipFile(f'{output_folder}{folder_name}.zip', 'r') as zip_ref:
+        filename=f'{file_name}.zip', url=url, resource_folder=output_folder)
+    with zipfile.ZipFile(f'{output_folder}{file_name}.zip', 'r') as zip_ref:
         zip_ref.extractall(f'{output_folder}')
