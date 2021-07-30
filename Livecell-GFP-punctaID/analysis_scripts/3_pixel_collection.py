@@ -12,9 +12,9 @@ from loguru import logger
 logger.info('Import OK')
 
 # define location parameters
-image_folder = f'python_results/initial_cleanup/'
-mask_folder = f'python_results/napari_masking/'
-output_folder = f'python_results/pixel_collection/'
+image_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/initial_cleanup/'
+mask_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/napari_masking/'
+output_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/pixel_collection/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

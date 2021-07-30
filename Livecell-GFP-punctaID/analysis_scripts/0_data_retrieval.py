@@ -40,9 +40,9 @@ def download_resources(filename, url, resource_folder):
 
 if __name__ == "__main__":
 
-    url = 'https://sandbox.zenodo.org/record/888160/files/Livecell-GFP-punctaID_analysis.zip?download=1'
-    folder_name = 'zenodo_download'
-    output_folder = 'python_results/'
+    url = 'https://zenodo.org/record/5146871/files/Livecell-GFP-punctaID_Analyzed.zip?download=1'
+    file_name = 'Livecell-GFP-punctaID'
+    output_folder = 'Livecell-GFP-punctaID/python_results'
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)

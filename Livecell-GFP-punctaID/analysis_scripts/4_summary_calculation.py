@@ -11,8 +11,8 @@ from loguru import logger
 
 logger.info('Import OK')
 
-input_folder = f'python_results/pixel_collection/'
-output_folder = f'python_results/summary_calculations/'
+input_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/pixel_collection/'
+output_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/summary_calculations/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

@@ -16,10 +16,10 @@ from loguru import logger
 
 logger.info('Import OK')
 
-input_path = f'python_results/summary_calculations/'
-output_folder = f'python_results/plot/'
-image_folder = f'python_results/initial_cleanup/'
-feature_masks_folder = f'python_results/napari_masking/'
+input_path = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/summary_calculations/'
+output_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/plot/'
+image_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/initial_cleanup/'
+feature_masks_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/napari_masking/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

@@ -12,9 +12,9 @@ from skimage.segmentation import clear_border
 from napari.utils.settings import SETTINGS
 SETTINGS.application.ipy_interactive = False
 
-image_folder = f'python_results/initial_cleanup/'
-mask_folder = f'python_results/cellpose_masking/'
-output_folder = f'python_results/napari_masking/'
+image_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/initial_cleanup/'
+mask_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/cellpose_masking/'
+output_folder = f'Livecell-GFP-punctaID/python_results/Livecell-GFP-punctaID_Analyzed/napari_masking/'
 
 
 def filter_masks(image_stack, image_name, mask_stack):
