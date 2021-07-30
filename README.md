@@ -1,5 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5146871.svg)](https://zenodo.org/record/5146871)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5146871.svg)](https://zenodo.org/record/5146871) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5147885.svg)](https://zenodo.org/record/5147885)
 # EMP1 trafficking 
 This repository contains the analysis scripts associated with the manuscript titled *Virulence determinant, PTP7, controls vesicle budding from the Maurer’s clefts, adhesin protein trafficking and host cell remodeling in* Plasmodium falciparum (bioRxiv doi pending). The project was led by Olivia Carmo and analysis scripts were written with Dr. Dezerae Cox<sup id="a1">[1](#f1)</sup>. This manuscript is in preparation and a final verison will be available upon publication. 
 
