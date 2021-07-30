@@ -9,9 +9,9 @@ from loguru import logger
 
 logger.info('Import OK')
 
-input_folder = f'python_results/feature_collection/'
-output_folder = f'python_results/summary_calculations/'
-scale_folder = f'python_results/napari_scale/'
+input_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/feature_collection/'
+output_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/summary_calculations/'
+scale_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_scale/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

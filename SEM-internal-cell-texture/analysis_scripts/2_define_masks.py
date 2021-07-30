@@ -19,9 +19,9 @@ logger.info('Import ok')
 # from napari.utils.settings import SETTINGS
 # SETTINGS.application.ipy_interactive = False
 
-image_folder = f'python_results/initial_cleanup_zoom/'
-mask_folder = f'python_results/cellpose_masking/'
-output_folder = f'python_results/napari_masking/'
+image_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/initial_cleanup_zoom/'
+mask_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/cellpose_masking/'
+output_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_masking/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

@@ -13,9 +13,9 @@ from loguru import logger
 
 logger.info('Import OK')
 
-image_folder = f'python_results/initial_cleanup_zoom/'
-input_folder = f'python_results/napari_scale/'
-output_folder = f'python_results/napari_scale/'
+image_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/initial_cleanup_zoom/'
+input_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_scale/'
+output_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_scale/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

@@ -18,10 +18,10 @@ import matplotlib.font_manager as fm
 
 logger.info('Import OK')
 
-input_folder = 'python_results/feature_collection/'
-scale_folder = 'python_results/napari_scale/'
-output_folder = 'python_results/plot/'
-np_mask_folder = 'python_results/napari_masking/'
+input_folder = 'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/feature_collection/'
+scale_folder = 'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_scale/'
+output_folder = 'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/plot/'
+np_mask_folder = 'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_masking/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

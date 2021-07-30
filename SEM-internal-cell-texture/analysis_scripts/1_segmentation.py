@@ -22,8 +22,8 @@ from skimage import morphology
 from skimage.filters import try_all_threshold
 from loguru import logger
 
-input_folder = f'python_results/initial_cleanup_zoom/'
-output_folder = f'python_results/cellpose_masking/'
+input_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/initial_cleanup_zoom/'
+output_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/cellpose_masking/'
 
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)

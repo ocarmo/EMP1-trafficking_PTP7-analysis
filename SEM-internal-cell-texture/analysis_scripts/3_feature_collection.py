@@ -10,9 +10,9 @@ from loguru import logger
 
 logger.info('Import OK')
 
-image_folder = f'experimental_data/initial_cleanup_zoom/'
-mask_folder = f'python_results/napari_masking/'
-output_folder = f'python_results/feature_collection/'
+image_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/initial_cleanup_zoom/'
+mask_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/napari_masking/'
+output_folder = f'SEM-internal-cell-texture/python_results/SEM-internal-cell-texture_Analyzed/feature_collection/'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)

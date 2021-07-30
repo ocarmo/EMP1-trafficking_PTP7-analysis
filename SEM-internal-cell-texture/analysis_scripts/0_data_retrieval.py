@@ -40,10 +40,9 @@ def download_resources(filename, url, resource_folder):
 
 if __name__ == "__main__":
 
-    url = 'https://sandbox.zenodo.org/record/888160/files/SEM-internal-cell-texture_analysis.zip?download=1'
+    url = 'https://zenodo.org/record/5146871/files/SEM-internal-cell-texture_Analyzed.zip?download=1'
     file_name = 'SEM-internal-cell-texture'
     output_folder = 'SEM-internal-cell-texture/python_results'
-
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
