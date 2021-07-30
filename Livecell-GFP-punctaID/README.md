@@ -1,30 +1,12 @@
 # GFP puncta identification
 
-**Purpose**: 
-Implement general-purpose scripts to integrate CellPose cell quantification into a range of workflows.
+**Purpose**: Identify GFP-puncta in P. falciparum infected red blood cells. Livecell images acquired at 100x on a widefield microscopy and Huygens deconvolved[1].
 
-**Cell Types tested**: 
-- Neuro-2a 
-- HEK293T
-- *P. falciparum* infected RBCs
+**Data produced**: From Huygens deconvolved TIFF stacks, cells and nuclei were outlined using a maximum projection of the bright field channel and GFP-puncta outlined using a maximum projection of the FITC (GFP) channel. The mask arrays were export as a pandas dataframe/csv for further processing.
 
-**Instrument/techniques**:
-- Confocal microscopy datasets at 100X or 63X zoom
-- Widefield microscopy datasets at 100X
+**Figures in manuscript**: Used to generate data depicted in S10.
 
-**Data produced:** 
-- From Huygens deconvolved TIFF stacks, outline cells and nuclei using the bright field image and GFP-puncta using the FITC image.
-- Export this is pandas dataframe/csv for further processing
+**Analysis software**: [CellPose](https://www.cellpose.org/) package, python; [Napari](https://napari.org/) package, python.
 
-**Analysis:** 
-- Live cell microscopy: Extract features of GFP-labeled puncta in *P. falciparum* infected RBCs for comparisons between different cell lines.
-
-**Getting started:**
-- All dependancies can be found in the ```environment.yml``` file. To install these automatically into a new conda environment:
-```conda env create -f environment.yml```
-- After installation, don't forget to activate your new environment (```conda activate droplet_analysis```)
-
-**References/Resources:** 
-- CellPose [homepage](http://www.cellpose.org/), [documentation](https://cellpose.readthedocs.io/en/latest/) and [repository](https://github.com/MouseLand/cellpose)
-- Napari [repository](https://github.com/napari/napari), [documentation](https://napari.org/docs/) and [tutorials](https://napari.org/tutorials/)
-
+**References/Resources**: Stringer C, Wang T, Michaelos M, Pachitariu M. Cellpose: a generalist algorithm for cellular segmentation. bioRxiv; 2020. DOI: 10.1101/2020.02.02.931238 ; napari contributors (2019). napari: a multi-dimensional image viewer for python. doi:10.5281/zenodo.3555620. 
+[1] Images were deconvolved with Huygens Professional version 19.04 (Scientific Volume Imaging, The Netherlands, http://svi.nl), using the CMLE algorithm with 50 iterations.
