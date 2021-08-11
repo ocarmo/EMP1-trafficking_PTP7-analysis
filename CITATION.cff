@@ -1,0 +1,10 @@
+cff-version: 1.1.0
+message: "If you use this respository, please cite it as below."
+authors:
+  - family-names: Carmo
+    given-names: Olivia M. S.
+    orcid: https://orcid.org/0000-0002-0132-3843
+title: "EMP1-trafficking_PTP7-analysis"
+version: 1.0
+doi: 10.5281/zenodo.5147885
+date-released: 2021-07-30
