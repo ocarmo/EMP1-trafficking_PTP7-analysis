@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5146871.svg)](https://zenodo.org/record/5146871) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5147885.svg)](https://zenodo.org/record/5147885)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5146871.svg)](https://zenodo.org/record/5146871) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6747921.svg)](https://zenodo.org/record/6747921)
 # EMP1 trafficking 
 This repository contains the analysis scripts associated with the manuscript titled *Deletion of the* Plasmodium falciparum *exported protein PTP7 leads to Maurer’s clefts vesiculation, host cell remodeling defects, and loss of surface presentation of EMP1* (PLOS Pathogens doi pending). The project was led by Olivia Carmo and analysis scripts were written with Dr. Dezerae Cox<sup id="a1">[1](#f1)</sup>.
 
