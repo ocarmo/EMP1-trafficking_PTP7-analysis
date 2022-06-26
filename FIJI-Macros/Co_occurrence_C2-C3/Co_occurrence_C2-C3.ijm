@@ -1,8 +1,9 @@
 /* Co-occurence_C2vC3_count.ijm
- * last updated 2021.03.03
- * 
- * This macro takes hyperstacks of IFAs with distinct antibodies in channels 2 and 3
- * to generate representative puncta masks and then identify co-occuring particles.
+ * 2022-05-10 added 'invert LUT' to fix weird bugs re: masking (lines 195, 212, 232, 240)
+ *     and changed pixel size threshold from 4 to 3 pixels.
+ * 2022-01-18 added 'invert LUT' to fix weird bugs re: masking (lines 195, 212, 232, 240)
+ *     and changed pixel size threshold from 4 to 3 pixels.
+ * 2021-03-03 This macro takes hyperstacks of IFAs with distinct antibodies in channels 2 and 3 to generate representative puncta masks and then identify co-occuring particles.
  * 
  * Adapted from Ellie Cho's Co-occurrence macro from the 2019 BOMP FIJI Macro workshop.
  */
@@ -46,7 +47,6 @@
 		image = "C2-"+ list[i]; 	
 		selectWindow(image);
 		run("Z Project...", "projection=[Max Intensity]");
-		// ATS = acidic terminal segment of PfEMP1. EMP1 and ATS are used interchangeably in this script.
 		rename("C2_MIP");
 		
 		image = "C3-"+ list[i]; 
@@ -91,47 +91,11 @@
 		count = roiManager("count");
 	
 		if (count <= 3){
-		
-			/*
-			//make cell mask w/ convexhull
-			imageCalculator("Add create","EMP1_MIP","REX1_MIP");
-			rename("EMP1_REX1_MIP");
-			run("Duplicate...", " ");
-			run("Gaussian Blur...", "sigma=2");
-			setOption("ScaleConversions", true);
-			run("8-bit");
-			run("Auto Threshold", "method=Moments white");
-			//run("Auto Threshold", "method=Intermodes white");
-			//run("Auto Threshold", "method=MaxEntropy white");
-			//run("Auto Threshold", "method=Shanbhag white");
-			//run("Auto Threshold", "method=Isodata white");
-			run("Set Measurements...", "area redirect=None decimal=3");
-			run("Analyze Particles...", "size=3-Infinity pixel circularity=0.25-1.00 exclude clear add");
-			count = getValue("results.count");
-			
-			if (count >= 2){
-				roiManager("Select", Array.getSequence(roiManager("count")));
-				roiManager("combine");
-				run("Convex Hull");
-			}else{
-			roiManager("Select", Array.getSequence(roiManager("count")));
-			run("Convex Hull");
-			}
-			
-			run("Fill");
-			run("Convert to Mask");
-			run("Gaussian Blur...", "sigma=2");
-			run("Auto Threshold", "method=Default white");
-			run("Morphological Filters", "operation=Dilation element=Disk radius=2");
-			run("Fill Holes");
-			run("Morphological Filters", "operation=Opening element=Disk radius=10");
-			rename("cellmask");
-			*/
 			
 			//make nucleus mask via DAPI
 			selectWindow("DAPI_MIP");
 			run("Duplicate...", " ");
-			run("Median...", "sigma=15");
+			run("Gaussian Blur...", "sigma=3"); //changed from median sigma 15
 			setAutoThreshold("Default dark");
 			run("Convert to Mask");
 			rename("DAPI_mask");
@@ -146,7 +110,7 @@
 			run("Gaussian Blur...", "sigma=2");
 			setAutoThreshold("Default dark");
 			run("Convert to Mask");
-			run("Morphological Filters", "operation=Opening element=Disk radius=5");
+			//run("Morphological Filters", "operation=Opening element=Disk radius=5");
 			rename("C2_MIP-1-largest");
 
 			//Make paramask
@@ -166,7 +130,7 @@
 				rename("paramask");	
 			}
 			
-			run("Morphological Filters", "operation=Opening element=Disk radius=5");
+			run("Morphological Filters", "operation=Opening element=Disk radius=3");
 			rename("paramask");
 
 			//check number of parasites
@@ -192,9 +156,10 @@
 				selectWindow("cellmask");
 				imageCalculator("AND create", "cellmask","C3mask_clefts");
 				imageCalculator("AND create", "C3mask_clefts","cytoplasm");
+				run("Invert LUT");
 				run("Watershed");
 				run("Set Measurements...", "  redirect=None decimal=3");
-				run("Analyze Particles...", "size=4-Infinity pixel circularity=0.2-1.00 show=Masks");
+				run("Analyze Particles...", "size=1-Infinity pixel circularity=0.01-1.00 show=Masks");
 				run("Invert LUT");
 				rename("C3mask");
 
@@ -208,9 +173,10 @@
 				selectWindow("cellmask");
 				imageCalculator("AND create", "cellmask","C2mask_clefts");
 				imageCalculator("AND create", "C2mask_clefts","cytoplasm");
+				run("Invert LUT");
 				run("Watershed");
 				run("Set Measurements...", "  redirect=None decimal=3");
-				run("Analyze Particles...", "size=4-Infinity pixel circularity=0.2-1.00 show=Masks");
+				run("Analyze Particles...", "size=1-Infinity pixel circularity=0.01-1.00 show=Masks");
 				run("Invert LUT");
 				rename("C2mask");
 
@@ -226,6 +192,7 @@
 					//create 'both' mask
 					imageCalculator("Add create", "C2mask","C3mask");
 					rename("Bothmask");
+					run("Invert LUT");
 
 		//run analyse particle and add to ROI manager
 		roiManager("reset"); 
@@ -233,6 +200,7 @@
 
 		//create 3 new black images - Redonly, Greenonly, Both
 		imageCalculator("Subtract create", "Bothmask","Bothmask");
+		run("Invert LUT");
 		rename("C2only");
 		run("Duplicate...", "title=C3only");
 		run("Duplicate...", "title=Both");
@@ -284,7 +252,7 @@
 
 		//make raw MIP proof (including DAPI)
 		//c1-7: 1-red, 2-green, 3-blue, 4-gray, 5-cyan, 6-magenta, and 7-yellow
-		run("Merge Channels...", "c6=C2_MIP c2=C3_MIP c3=DAPI_MIP create keep");
+		run("Merge Channels...", "c2=C2_MIP c6=C3_MIP c3=DAPI_MIP create keep");
 		run("Stack to RGB");
 		rename("rawimage");
 		run("Select All");
@@ -293,7 +261,7 @@
 
 		//make counting proof
 		//c1-7: 1-red, 2-green, 3-blue, 4-gray, 5-cyan, 6-magenta, and 7-yellow
-		run("Merge Channels...", "c6=C2only c2=C3only c4=Both create keep");
+		run("Merge Channels...", "c2=C2only c6=C3only c4=Both create keep");
 		run("Stack to RGB");
 		rename("counted_masks");
 		run("Select All");
