@@ -13,8 +13,12 @@ For ```Co_occurrence_C2-C3.ijm``` validated output, data was plotted using seabo
 
 **References**
 <b id="f1">1.</b> Images were deconvolved with Huygens Professional version 19.04 (Scientific Volume Imaging, The Netherlands, http://svi.nl), using the CMLE algorithm with 50 iterations. [↩](#a1)
+
 <b id="f2">2.</b> Schindelin J, Arganda-Carreras I, Frise E, Kaynig V, Longair M, Pietzsch T, et al. Fiji: an open-source platform for biological-image analysis. Nat Methods. 2012;9: 676–682. doi:10.1038/nmeth.2019. [↩](#2)
+
 <b id="f3">3.</b> McHugh E, Carmo OMS, Blanch A, Looker O, Liu B, Tiash S, et al. Role of *Plasmodium falciparum* Protein GEXP07 in Maurer’s Cleft Morphology, Knob Architecture, and *P. falciparum* EMP1 Trafficking. mBio. 2020;11. doi:10.1128/mBio.03320-19. [↩](#a3)
+
 <b id="f4">4.</b> Sofroniew N, Lambert T, Evans K, Nunez-Iglesias J, Winston P, Bokota G, et al. napari/napari: 0.4.9rc2. Zenodo; 2021. doi:10.5281/zenodo.4915656. [↩](#a4)
 updates: napari contributors (2019). napari: a multi-dimensional image viewer for python. doi:10.5281/zenodo.3555620 [↩](#a4)
+
 <b id="f5">5.</b> Waskom, M. L., (2021). seaborn: statistical data visualization. Journal of Open Source Software, 6(60), 3021, https://doi.org/10.21105/joss.03021 [↩](#a5)
